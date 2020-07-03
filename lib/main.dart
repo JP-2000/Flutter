@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/maps/quakes.dart';
 import 'package:flutter_projects/maps/simple_google_maps.dart';
+import 'package:flutter_projects/myapp/app_within_app.dart';
 import 'package:flutter_projects/parsing_json/json_parsing_maps.dart';
 import 'package:flutter_projects/weather_forecast/weather_forecast.dart';
 import 'myapp/simple_video_player.dart';
@@ -36,7 +37,7 @@ void main() => runApp(
   new MaterialApp(
     theme: ThemeData.dark(),
 //    theme: appTheme,
-    home: Quakes(),
+    home: AppWithinApp(),
   )
 );
 //void main() => runApp(Home());
