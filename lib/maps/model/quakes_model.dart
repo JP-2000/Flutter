@@ -1,3 +1,5 @@
+import 'package:flutter_projects/maps/util/types_helper.dart';
+
 class QuakesModel {
   String type;
   Metadata metadata;
@@ -109,13 +111,13 @@ class Properties {
   String place;
   int time;
   int updated;
-  Null tz;
+  double tz;
   String url;
   String detail;
   int felt;
   double cdi;
-  Null mmi;
-  Null alert;
+  double mmi;
+  String alert;
   String status;
   int tsunami;
   int sig;
@@ -161,29 +163,29 @@ class Properties {
         this.title});
 
   Properties.fromJson(Map<String, dynamic> json) {
-    mag = json['mag'].toDouble();
+    mag = TypesHelper.toDouble(json['mag']);
     place = json['place'];
-    time = json['time'];
-    updated = json['updated'];
-    tz = json['tz'];
+    time = TypesHelper.toInt(json['time']);
+    updated = TypesHelper.toInt(json['updated']);
+    tz = TypesHelper.toDouble(json['tz']);
     url = json['url'];
     detail = json['detail'];
-    felt = json['felt'];
-    cdi = json['cdi'].toDouble();
-    mmi = json['mmi'];
+    felt = TypesHelper.toInt(json['felt']);
+    cdi = TypesHelper.toDouble(json['cdi']);
+    mmi = TypesHelper.toDouble(json['mmi']);
     alert = json['alert'];
     status = json['status'];
-    tsunami = json['tsunami'];
-    sig = json['sig'];
+    tsunami = TypesHelper.toInt(json['tsunami']);
+    sig = TypesHelper.toInt(json['sig']);
     net = json['net'];
     code = json['code'];
     ids = json['ids'];
     sources = json['sources'];
     types = json['types'];
-    nst = json['nst'];
-    dmin = json['dmin'].toDouble();
-    rms = json['rms'].toDouble();
-    gap = json['gap'];
+    nst = TypesHelper.toInt(json['nst']);
+    dmin = TypesHelper.toDouble(json['dmin']);
+    rms = TypesHelper.toDouble(json['rms']);
+    gap = TypesHelper.toDouble(json['gap']);
     magType = json['magType'];
     type = json['type'];
     title = json['title'];
