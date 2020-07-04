@@ -23,12 +23,21 @@ class _AppWithinAppState extends State<AppWithinApp> {
   void _openMxPlayer() {
     final AndroidIntent intent = AndroidIntent(
       action: 'action_view',
-      data: Uri.encodeFull("http://techslides.com/demos/sample-videos/small.mp4"),
+      data: Uri.encodeFull("https://drive.google.com/file/d/15IQNjJihCvIwdH2L5qwXVN7luuylAnRL/preview"),
       package: 'com.mxtech.videoplayer.ad'
     );
     intent.launch();
   }
-  
+
+  Future<void> _openurl() async {
+    String url = "https://drive.google.com/file/d/15IQNjJihCvIwdH2L5qwXVN7luuylAnRL/view";
+    if (await canLaunch(url)) {
+      await launch(url);
+    }
+    else throw 'Could not launch';
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +47,7 @@ class _AppWithinAppState extends State<AppWithinApp> {
       body: Center(
         child: RaisedButton(
           child: Text("Press"),
-          onPressed: _openMxPlayer,
+          onPressed: _openurl,
         )
       ),
     );
