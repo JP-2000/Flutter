@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/manga_app/manga_app.dart';
 import 'package:flutter_projects/maps/quakes.dart';
 import 'package:flutter_projects/maps/simple_google_maps.dart';
 import 'package:flutter_projects/myapp/app_within_app.dart';
@@ -38,9 +39,10 @@ void main() => runApp(
   new MaterialApp(
     theme: ThemeData.dark(),
 //    theme: appTheme,
-    home: Webview(),
+    home: MangaApp(),
   )
 );
+
 //void main() => runApp(Home());
 
 // Video player plugin

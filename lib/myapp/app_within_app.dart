@@ -23,7 +23,7 @@ class _AppWithinAppState extends State<AppWithinApp> {
   void _openMxPlayer() {
     final AndroidIntent intent = AndroidIntent(
       action: 'action_view',
-      data: Uri.encodeFull("https://drive.google.com/file/d/15IQNjJihCvIwdH2L5qwXVN7luuylAnRL/preview"),
+      data: Uri.encodeFull("https://9sr4g3q37i9f0vh6k1srncmoetol5la4-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://api.replay.watch/Ads/gag5.xml&amp;vidUrl=https%3a%2f%2fnovelplanet.com%2fGetM3U8%3fcode%3d6e9613927c2e19100d38f784c0a07a49%26isMain%3dtrue%26quality%3d95"),
       package: 'com.mxtech.videoplayer.ad'
     );
     intent.launch();
@@ -47,7 +47,7 @@ class _AppWithinAppState extends State<AppWithinApp> {
       body: Center(
         child: RaisedButton(
           child: Text("Press"),
-          onPressed: _openurl,
+          onPressed: _openMxPlayer,
         )
       ),
     );
