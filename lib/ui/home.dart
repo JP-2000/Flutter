@@ -107,7 +107,7 @@ class _MoviesState extends State<Movies> {
           margin: EdgeInsets.only(
             left: MediaQuery.of(context).size.width * 0.0125 ,
             right: MediaQuery.of(context).size.width * 0.0125 ,
-            top: 10.0,g
+            top: 10.0,
           ),
 //        borderOnForeground: false,
           elevation: 10.0,
